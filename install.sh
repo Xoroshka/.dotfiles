@@ -4,41 +4,41 @@ set -e
 stow -V || (echo "Please install GNU Stow"; exit 1)
 
 TARGETS=(
-    diff-so-fancy
-    flake8
-    gdb
-    git
-    htop
-    mc
-    mpv
-    ranger
+#     diff-so-fancy
+#     flake8
+#     gdb
+#     git
+#     htop
+#     mc
+#     mpv
+#     ranger
     tmux
     vim
     zsh
 )
 
-case $(uname) in
-Linux)
-    TARGETS+=(
-        awesome
-        firejail
-        picom
-        rofi
-        urxvt
-        xorg
-        zathura
+# case $(uname) in
+# Linux)
+#     TARGETS+=(
+#         awesome
+#         firejail
+#         picom
+#         rofi
+#         urxvt
+#         xorg
+#         zathura
 
-        alacritty
-        sway
-    )
-;;
-Darwin)
-    TARGETS+=(
-        alacritty
-        hammerspoon
-    )
-;;
-esac
+#         alacritty
+#         sway
+#     )
+# ;;
+# Darwin)
+#     TARGETS+=(
+#         alacritty
+#         hammerspoon
+#     )
+# ;;
+# esac
 
 pushd ${HOME}/.dotfiles
 for X in ${TARGETS[@]}; do
